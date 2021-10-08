@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    yo
+    <p></p>
+    <script>
+        const p = document.querySelector("p")
+        const url = location.href
+        const u = new URL(url)
+        const code = u.searchParams.get("code")
+        p.innerHTML = `Code: ${code}`
+    </script>
 </body>
 </html>
